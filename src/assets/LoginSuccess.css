@@ -1,0 +1,105 @@
+.login-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../assets/Img/successs.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 20px; /* Added padding for small screens */
+}
+
+.card-login{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto; /* Allow card to adjust height based on content */
+    width: 50vw;
+    max-width: 90vw; /* Limit width on small screens */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 5px 3px 4px rgba(209, 200, 209, 0.1), -2px -8px 14px rgba(255, 0, 245, 0.1);
+    animation: dropDownCard 1s ease-out forwards; /* Card drop down animation */
+    background-color: aliceblue;
+}
+
+@keyframes dropDownCard {
+    0% { transform: translateY(-100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.login-text{
+    font-weight: 700;
+    margin-top: 50px;
+    color: darkcyan;
+    text-align: center; /* Center text for responsiveness */
+}
+
+.login-ac {
+    font-size: 25px;
+    color: rgb(243, 186, 117);
+    font-weight: 700;
+    text-align: center; 
+}
+
+.home {
+    margin-top: 20px;
+    background-color: steelblue;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    color: aliceblue;
+    font-weight: 700;
+    border: none; /* Remove default border */
+    
+}
+
+.home:hover {
+    background-color: #3737f0; /* Darker shade on hover */
+}
+
+.image {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 100px;
+    animation: dropDownImage 1.5s ease-out forwards; /* Image drop down animation */
+}
+
+@keyframes dropDownImage {
+    0% { transform: translate(-50%, -100px); opacity: 0; }
+    100% { transform: translate(-50%, 0); opacity: 1; }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .card-login {
+        width: 70vw; /* Adjust width on tablets */
+    }
+
+    .login-ac {
+        font-size: 20px; /* Adjust font size on smaller screens */
+    }
+
+    .image {
+        height: 80px; /* Adjust icon size on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .card-login {
+        width: 90vw; /* Adjust width on mobile devices */
+    }
+
+    .login-ac{
+        font-size: 18px; /* Further adjust font size for mobile */
+    }
+
+    .image {
+        height: 60px; /* Further adjust icon size for mobile */
+    }
+}
